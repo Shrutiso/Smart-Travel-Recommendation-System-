@@ -1,2 +1,2 @@
-# Smart-Travel-Recommendation-System-
+# Travel-Recommendation-System-
 A friendly Travel planner , under budget. 
