@@ -1,75 +1,192 @@
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background: linear-gradient(135deg, #74ebd5, #acb6e5);
+    font-family: 'Segoe UI', sans-serif;
     margin: 0;
-    padding: 0;
 }
 
-.container {
-    max-width: 900px;
-    margin: 40px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 14px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-h1 {
-    text-align: center;
-    color: #2c3e50;
-}
-
-form {
+/* ================= LOGIN ================= */
+.login-bg {
+    background: linear-gradient(120deg, #5fa9ff, #7cc6ff);
+    height: 100vh;
     display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
-input, select, button {
+.login-card {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    width: 350px;
+}
+
+.login-card input {
     padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-button {
-    background: #3498db;
+.login-card button {
+    background: #4c8bf5;
     color: white;
     border: none;
-    cursor: pointer;
+    padding: 12px;
+    width: 100%;
+    border-radius: 8px;
 }
 
-button:hover {
-    background: #2980b9;
+/* ================= DASHBOARD ================= */
+.dashboard-bg {
+    background: linear-gradient(120deg, #5fa9ff, #7cc6ff);
+    min-height: 100vh;
 }
 
+/* TOP BAR */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    color: white;
+}
+
+/* ================= WEATHER CARDS ================= */
+.cards {
+    display: flex;
+    gap: 15px;
+    padding: 10px 40px;
+}
+
+/* 🔥 COMPACT CARD SIZE */
 .card {
-    margin-top: 20px;
-    padding: 20px;
-    background: #f9f9f9;
-    border-radius: 12px;
+    background: white;
+    padding: 14px;
+    border-radius: 15px;
+    width: 30%;
+    text-align: center;
+    min-height: 140px;
 }
 
-.places li {
+/* Titles */
+.card h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.card h1 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.card p,
+.card small {
+    font-size: 13px;
+}
+
+/* ================= TRAVEL SECTION ================= */
+.travel-card {
+    background: white;
+    margin: 15px 40px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.travel-card button {
+    background: #4c8bf5;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+}
+
+.result {
+    margin-top: 15px;
+}
+
+.map-btn {
+    display: inline-block;
+    margin-top: 15px;
+    background: #2ecc71;
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+/* ================= RAIN CARD ================= */
+.rain-card {
+    background: linear-gradient(135deg, #eaf4ff, #f7fbff);
+}
+
+.rain-icon {
+    font-size: 40px;
+}
+
+.rain-chance span {
+    font-weight: bold;
+    color: #1f6ed4;
+}
+
+/* ================= CLOTHES DRY CARD ================= */
+.clothes-card {
+    background: linear-gradient(180deg, #fff7f7, #eef5ff);
+    border-radius: 18px;
+    text-align: center;
+}
+
+.clothes-icon {
+    font-size: 48px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+    100% { transform: translateY(0); }
+}
+
+.dry-status.good {
+    color: #2ecc71;
+    font-weight: bold;
+}
+
+.dry-status.bad {
+    color: #d63031;
+    font-weight: bold;
+}
+
+/* ================= WEATHER THEMES ================= */
+.weather-card {
+    text-align: center;
+}
+
+.weather-icon {
+    width: 70px;
     margin: 8px 0;
 }
 
-a {
-    color: #3498db;
-    text-decoration: none;
+/* Dynamic backgrounds */
+.sunny {
+    background: linear-gradient(135deg, #fde68a, #f59e0b);
 }
 
-a:hover {
-    text-decoration: underline;
+.cloudy {
+    background: linear-gradient(135deg, #cbd5e1, #94a3b8);
 }
 
-.route-btn {
-    display: inline-block;
-    margin-top: 15px;
-    background: #27ae60;
-    color: white;
-    padding: 10px 16px;
-    border-radius: 8px;
+.rain {
+    background: linear-gradient(135deg, #93c5fd, #2563eb);
+}
+
+.storm {
+    background: linear-gradient(135deg, #475569, #020617);
+}
+
+.good {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.bad {
+    color: #ef4444;
     font-weight: bold;
 }
